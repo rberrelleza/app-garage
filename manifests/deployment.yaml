@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appgarage
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appgarage
+  template:
+    metadata:
+      labels:
+        app: appgarage
+    spec:
+      containers:
+      - image: ramiro/appgarage:latest
+        name: appgarage
