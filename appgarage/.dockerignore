@@ -2,6 +2,4 @@ Dockerfile
 node_modules
 okteto.yml
 .stignore
-README.md
-bin
 *.sqlite3

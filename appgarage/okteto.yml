@@ -1,5 +1,5 @@
 name: app-garage
-image: okteto/desk:0.1.4
+image: ramiro/appgarage
 command:
 - bash
 workdir: /usr/src/app
