@@ -1,0 +1,5 @@
+name: app-garage
+image: okteto/desk:0.1.4
+command:
+- bash
+workdir: /usr/src/app
