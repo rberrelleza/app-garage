@@ -1,7 +1,8 @@
 class SearchController < ApplicationController
 
   def index
-    @apps = App.where("name LIKE ?", "%#{params[:query]}%")
+    OpenTracing.start_active_span('search') do
+      @apps = App.where("name LIKE ?", "%#{params[:query]}%")
+    end
   end
-
 end
